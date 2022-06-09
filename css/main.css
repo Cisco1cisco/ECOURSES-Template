@@ -69,6 +69,10 @@ ul {
 
 /* Start Header */
 
+header {
+  position: relative;
+}
+
 header .main-bar {
   display: flex;
   justify-content: space-around;
@@ -158,7 +162,7 @@ header .main-bar {
   top: 100%;
   width: 120px;
   left: -65px;
-  background-color: black;
+  background-color: white;
   transition: var(--trans-dur, 0.3s);
   -webkit-transition: var(--trans-dur, 0.3s);
   -moz-transition: var(--trans-dur, 0.3s);
@@ -243,6 +247,7 @@ header .main-bar {
   background-color: white;
   color: var(--title-color, #44425a);
   display: none;
+  z-index: 1;
 }
 
 .alt-bar .sub:hover ul {
@@ -297,6 +302,8 @@ header .main-bar {
 
 .alt-bar .list ul.main-list {
   display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .alt-bar .list ul.main-list > li > a {
@@ -335,6 +342,7 @@ header .main-bar {
   left: 0;
   display: none;
   width: 135px;
+  z-index: 1;
 }
 
 .alt-bar .list ul.main-list li.ok:hover .sub-list {
@@ -378,3 +386,86 @@ header .main-bar {
 }
 
 /* End Header */
+
+/* Start Landing */
+
+.landing {
+  height: 100vh;
+  background-image: url(../photos/Landing.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 40%);
+}
+
+.landing .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: white;
+}
+
+.landing .text h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.landing .text h1 {
+  font-size: 68px;
+}
+
+@media (max-width: 991px) {
+  .landing .text h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing .text h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 325px) {
+  .landing .text h1 {
+    font-size: 40px;
+  }
+}
+
+.landing .text a {
+  background-color: var(--main-color, #ff6600);
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: var(--trans-dur, 0.3s);
+  -webkit-transition: var(--trans-dur, 0.3s);
+  -moz-transition: var(--trans-dur, 0.3s);
+  -ms-transition: var(--trans-dur, 0.3s);
+  -o-transition: var(--trans-dur, 0.3s);
+}
+
+.landing .text a:hover {
+  background-color: #d95700;
+}
+
+/* End Landing */
