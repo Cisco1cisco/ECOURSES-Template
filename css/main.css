@@ -4,6 +4,7 @@
   --main-color: #ff6600;
   --title-color: #44425a;
   --para-color: #6c6a74;
+  --section-pad: 100px;
   --para-space: 1.2;
   --trans-dur: 0.3s;
 }
@@ -65,6 +66,25 @@ ul {
 /* End Global Rules */
 
 /* Start Component */
+
+.main-title {
+  text-align: center;
+}
+
+.main-title h5 {
+  font-size: 20px;
+  color: var(--main-color, #ff6600);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.main-title h1 {
+  font-size: 39px;
+  color: var(--title-color, #44425a);
+  font-weight: 700;
+}
+
 /* End Component */
 
 /* Start Header */
@@ -469,3 +489,100 @@ header .main-bar {
 }
 
 /* End Landing */
+
+/* Start About */
+
+.about {
+  padding-top: var(--section-pad, 100px);
+  padding-bottom: var(--section-pad, 100px);
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .about .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.about .image {
+  flex-basis: 40%;
+}
+
+@media (max-width: 991px) {
+  .about .image {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .image {
+    width: 100%;
+  }
+}
+
+.about .image img {
+  width: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.about .text {
+  flex-basis: 55%;
+}
+
+@media (max-width: 991px) {
+  .about .text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .text {
+    width: 100%;
+  }
+}
+
+.about .text .main-title {
+  text-align: left;
+}
+
+.about .text p {
+  color: var(--para-color, #6c6a74);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.about .text a {
+  font-weight: 600;
+  background-color: var(--main-color, #ff6600);
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  width: fit-content;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: var(--trans-dur, 0.3s);
+  -webkit-transition: var(--trans-dur, 0.3s);
+  -moz-transition: var(--trans-dur, 0.3s);
+  -ms-transition: var(--trans-dur, 0.3s);
+  -o-transition: var(--trans-dur, 0.3s);
+}
+
+.about .text a:hover {
+  background-color: #d95700;
+}
+
+/* End About */
