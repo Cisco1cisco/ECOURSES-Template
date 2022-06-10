@@ -674,3 +674,111 @@ header .main-bar {
 }
 
 /* End Category */
+
+/* Start Courses */
+
+.courses {
+  padding-top: var(--section-pad, 100px);
+  padding-bottom: var(--section-pad, 100px);
+}
+
+.courses .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courses .box {
+  flex-basis: calc((100% - 30px) / 3);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  overflow: hidden;
+  background-color: #f2f1f8;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .courses .box {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .courses .box {
+    flex-basis: 70%;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .courses .box {
+    flex-basis: 100%;
+  }
+}
+
+.courses .box img {
+  width: 100%;
+}
+
+.courses .box i {
+  color: var(--main-color, #ff6600);
+  margin-right: 2px;
+  font-size: 16px;
+}
+
+.courses .box .bar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courses .box .bar span {
+  font-size: 12px;
+  color: var(--para-color, #6c6a74);
+}
+
+.courses .box a {
+  display: block;
+  font-size: 20px;
+  color: var(--title-color, #44425a);
+  padding: 15px 25px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.courses .box a:hover {
+  color: var(--main-color, #ff6600);
+  text-decoration: underline;
+}
+
+.courses .box .rate {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--title-color, #44425a);
+  font-size: 20px;
+  position: relative;
+}
+
+.courses .box .rate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+/* End Courses */
