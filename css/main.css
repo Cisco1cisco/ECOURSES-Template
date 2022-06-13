@@ -1077,3 +1077,76 @@ header .main-bar {
 }
 
 /* End Teachers */
+
+/* Start Testimonial */
+
+.testimonial {
+  padding-top: var(--section-pad, 100px);
+  padding-bottom: var(--section-pad, 100px);
+}
+
+.testimonial .container {
+  text-align: center;
+}
+
+.testimonial .icon {
+  font-size: 85px;
+  color: var(--main-color, #ff6600);
+}
+
+.testimonial p {
+  color: var(--title-color, #44425a);
+  font-size: 23px;
+  line-height: 1.5;
+  width: 70%;
+  margin: 0 auto 30px;
+}
+
+.testimonial .info img {
+  width: 80px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.testimonial .info h5 {
+  color: var(--title-color, #44425a);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.testimonial .info span {
+  color: var(--para-color, #6c6a74);
+}
+
+.testimonial nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.testimonial nav div {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color, #ff6600);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 10px;
+  border: 3px solid white;
+  outline: 2px solid var(--main-color, #ff6600);
+  cursor: pointer;
+}
+
+.testimonial nav div.active {
+  background-color: var(--title-color, #44425a);
+}
+
+/* End Testimonial */
