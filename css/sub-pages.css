@@ -101,6 +101,8 @@ ul {
 .comp h3 {
   font-size: 54px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .comp p a,
