@@ -1446,3 +1446,36 @@ footer .down ul a {
 }
 
 /* End Footer */
+
+/* Start Scroll */
+
+.scroll {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: var(--main-color, #ff6600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: var(--trans-dur, 0.3s);
+  -webkit-transition: var(--trans-dur, 0.3s);
+  -moz-transition: var(--trans-dur, 0.3s);
+  -ms-transition: var(--trans-dur, 0.3s);
+  -o-transition: var(--trans-dur, 0.3s);
+  z-index: 9;
+}
+
+.scroll:hover {
+  background-color: #d95700;
+}
+
+/* End Scroll */
