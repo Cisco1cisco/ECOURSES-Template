@@ -979,12 +979,12 @@ header .main-bar {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   cursor: pointer;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 991px) {
   .teachers .member {
     flex-basis: calc((100% - 40px) / 2);
-    margin-bottom: 40px;
   }
 }
 
