@@ -121,3 +121,308 @@ ul {
 }
 
 /* End Comp */
+
+/* Start Blog list */
+
+.blog-list {
+  padding-top: var(--section-pad, 100px);
+  padding-bottom: var(--section-pad, 100px);
+}
+
+.blog-list > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+  .blog-list > .container {
+    flex-direction: column;
+  }
+}
+
+.blog-list .left {
+  flex-basis: 67%;
+}
+
+@media (max-width: 991px) {
+  .blog-list .left {
+    margin-bottom: 40px;
+  }
+}
+
+.blog-list .blog {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-list .blog .item {
+  flex-basis: calc((100% - 30px) / 2);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .blog-list .blog .item {
+    flex-basis: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-list .blog .item {
+    flex-basis: 90%;
+  }
+}
+
+.blog-list .left nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-list .left nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid #dee2e6;
+  overflow: hidden;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.blog-list .left nav ul li {
+  padding: 20px;
+  color: var(--main-color, #ff6600);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .blog-list .left nav ul li {
+    padding: 20px 15px;
+  }
+}
+
+.blog-list .left nav ul li:not(li.active):hover {
+  background-color: #e9ecef;
+  color: #b34700;
+}
+
+.blog-list .left nav ul li.active {
+  background-color: var(--main-color, #ff6600);
+  color: white;
+}
+
+.blog-list .left nav ul li:not(li:first-of-type) {
+  border-left: 1px solid #dee2e6;
+}
+
+.blog-list .right {
+  padding: 0 10px;
+  flex-basis: 32%;
+}
+
+.blog-list .right .user {
+  background-color: var(--title-color, #44425a);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 50px 10px;
+  text-align: center;
+}
+
+.blog-list .right .user img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.blog-list .right .user h3 {
+  color: var(--main-color, #ff6600);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.blog-list .right .user p {
+  line-height: 1.5;
+  color: white;
+}
+
+.blog-list .right .serach {
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.blog-list .right .serach input {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.blog-list .right .serach input:focus {
+  outline: none;
+}
+
+.blog-list .right .serach input::placeholder {
+  font-size: 20px;
+}
+
+.blog-list .right .serach .icon {
+  border: 1px solid #ced4da;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.blog-list .right .th {
+  margin-top: 40px;
+}
+
+.blog-list .right h3:not(.user h3) {
+  color: var(--title-color, #44425a);
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.blog-list .right .cat ul {
+  margin-top: 20px;
+}
+
+.blog-list .right .cat ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.blog-list .right .cat ul li:not(li:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.blog-list .right .cat ul li a {
+  color: var(--title-color, #44425a);
+  font-weight: 500;
+  display: block;
+  transition: var(--trans-dur, 0.3s);
+  -webkit-transition: var(--trans-dur, 0.3s);
+  -moz-transition: var(--trans-dur, 0.3s);
+  -ms-transition: var(--trans-dur, 0.3s);
+  -o-transition: var(--trans-dur, 0.3s);
+}
+
+.blog-list .right .cat ul li a:hover {
+  color: #b34700;
+}
+
+.blog-list .right .cat ul li span {
+  width: fit-content;
+  color: white;
+  background-color: var(--main-color, #ff6600);
+  font-size: 12px;
+  padding: 5px 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.blog-list .right .post {
+  margin-top: 30px;
+  display: flex;
+}
+
+.blog-list .right .post img {
+  width: 80px;
+  height: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin-right: 10px;
+}
+
+.blog-list .right .post h6 {
+  font-weight: 500;
+  color: var(--title-color, #44425a);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.blog-list .right .post p {
+  color: var(--main-color, #ff6600);
+  font-size: 12px;
+  transition: var(--trans-dur, 0.3s);
+  -webkit-transition: var(--trans-dur, 0.3s);
+  -moz-transition: var(--trans-dur, 0.3s);
+  -ms-transition: var(--trans-dur, 0.3s);
+  -o-transition: var(--trans-dur, 0.3s);
+}
+
+.blog-list .right .post:hover p {
+  color: #b34700;
+}
+
+.blog-list .right .tags .cont {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-list .right .tags .cont a {
+  display: block;
+  width: fit-content;
+  padding: 10px;
+  color: var(--main-color, #ff6600);
+  border: 1px solid var(--main-color, #ff6600);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin: 0 5px 10px 0;
+  transition: var(--trans-dur, 0.3s);
+  -webkit-transition: var(--trans-dur, 0.3s);
+  -moz-transition: var(--trans-dur, 0.3s);
+  -ms-transition: var(--trans-dur, 0.3s);
+  -o-transition: var(--trans-dur, 0.3s);
+}
+
+.blog-list .right .tags .cont a:hover {
+  background-color: var(--main-color, #ff6600);
+  color: white;
+}
+
+/* End Blog list */
